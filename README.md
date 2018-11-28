@@ -22,7 +22,7 @@ pod 'VietIdSDK-iOS'
 
 ## Author
 
-songoku20, sonleminh@tcom.net.vn
+songoku20, sonleminh@vccorp.vn
 
 ## License
 
