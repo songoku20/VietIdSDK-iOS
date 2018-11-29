@@ -43,13 +43,36 @@ static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
 @property(nonatomic, strong) id<OnVietIdLoginCallback> onVietIdLoginCallback;
 @property(nonatomic, strong) id<OnVietIdResponse> onVietIdResponse;
 
+/**
+ * Create singleton instance of VietIdSDKController
+ */
 +(instancetype)sharedInstance;
 
+/**
+ * Init and make config for vietidController
+ * Call first before working with VietIdController
+ * Such that: [[VietIdSDKController sharedInstance] configure];
+ */
 -(void) configure;
 
+/**
+ * @return clientId for your application with vietIdSDK
+ */
 -(NSString*)getCLientId;
+
+/**
+ * @return redirectUri for your application with vietIdSDK
+ */
 -(NSString*)getRedirectUri;
+
+/**
+ * @return clientSecret for your application with vietIdSDK
+ */
 -(NSString*)getClientSecret;
+
+/**
+ * @return bundleId of your application
+ */
 -(NSString*)getBundleId;
 
 /**
@@ -61,15 +84,23 @@ static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
 
 /**
  * Call to check logged in session with asynchronous from server check
- *
+ * Callback result via delegate class: OnVietIdResponse
  */
 -(void)checkTokenOnServer;
 
 //For login/logout
+/**
+ * Call this when you want to login via vietID
+ */
 -(void)login;
-
+/**
+ * Call this when you want to logout via vietID
+ */
 -(BOOL)logout;
 
+/**
+ * Call this when you want to logout via vietID with asynchronous state
+ */
 -(void)logoutAsync:(void(^)(BOOL  success,VietIdException* error))callback;
 
 //For get user information
@@ -82,8 +113,14 @@ static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
  */
 -(UserInfo*)getUserInfo;
 
+/**
+ * Set disable phone number on login session: YES if you want disable login via vietID with phonenumber otherwise
+ */
 -(void)disablePhone:(BOOL) disable;
 
+/**
+ * Get disable phone number on login session: YES if you want disable login via vietID with phonenumber otherwise
+ */
 -(NSString*)isDisablePhone;
 
 @end

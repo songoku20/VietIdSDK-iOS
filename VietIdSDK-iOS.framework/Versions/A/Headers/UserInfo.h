@@ -25,9 +25,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString* email       ;
 @property(nonatomic, strong) NSString* code_login  ;
 @property(nonatomic, strong) NSString* change_info ;
-
+/**
+ * Not call method everytime from your app
+ */
 +(UserInfo*) initFromDic:(NSDictionary*) dict;
-
+/**
+ * Get userinfo object as NSDictionary
+ */
 -(NSDictionary*)toDict;
 @end
 NS_ASSUME_NONNULL_END
