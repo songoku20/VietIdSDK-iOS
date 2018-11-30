@@ -53,7 +53,7 @@ static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
  * Call first before working with VietIdController
  * Such that: [[VietIdSDKController sharedInstance] configure];
  */
--(void) configure;
+-(void) configure:(NSString*) clientId clientSecret:(NSString*)clientSecret;
 
 /**
  * @return clientId for your application with vietIdSDK
