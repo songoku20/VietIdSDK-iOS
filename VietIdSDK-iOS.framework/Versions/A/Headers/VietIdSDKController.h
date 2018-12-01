@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define VERSION_NAME @"1.0.2"
+#define VERSION_NAME @"1.0.5"
 
 #define EN @"en"
 #define VI @"vi"
