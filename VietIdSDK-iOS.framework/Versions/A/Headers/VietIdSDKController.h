@@ -14,8 +14,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define VERSION_NAME @"1.0.5"
-
 #define EN @"en"
 #define VI @"vi"
 #define FR @"fr"
@@ -38,6 +36,7 @@ static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
 //For VietIdSDK public method and properties
 @interface VietIdSDKController : NSObject
 
+@property(nonatomic) BOOL debugMode;
 @property(nonatomic, strong) NSString* language;
 @property(nonatomic, readonly) NSInteger actionType;
 @property(nonatomic, strong) id<OnVietIdLoginCallback> onVietIdLoginCallback;
