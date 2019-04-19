@@ -15,8 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * @return new instance of vietid exception to handle error from sdk and call back error from server vietID
  */
-+(instancetype)newInstance:(NSString*)message;
++(instancetype)newInstance:(NSInteger)errorCode description:(NSString*)message;
 
+@property(nonatomic) NSInteger errorCode;
 @property(nonatomic, strong) NSString* message;
 @end
 
