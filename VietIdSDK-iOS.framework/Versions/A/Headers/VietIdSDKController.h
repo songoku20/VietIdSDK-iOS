@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define EN @"en"
 #define VI @"vi"
 #define FR @"fr"
+#define CN @"zh"
+
 
 static NSInteger NATIVE = 0;//Show fullscreen of dialog authen
 static NSInteger NATIVE_WITH_FALLBACK = 1; //Show fullscreen authen otherwise show web dialog to authen
