@@ -125,6 +125,15 @@ static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
  */
 -(NSString*)isDisablePhone;
 
+/**
+ * Get identifier for advertisers
+ */
+-(NSString*)getIDFA;
+
+/**
+ * Get unique ID.
+ */
+-(NSString*)getUniqueID;
 @end
 
 NS_ASSUME_NONNULL_END

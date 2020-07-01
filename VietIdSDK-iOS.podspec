@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VietIdSDK-iOS'
-  s.version          = '1.1.3'
+  s.version          = '1.1.6'
   s.summary          = 'Everything about this project under our ownership'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'songoku20' => 'sonleminh@vccorp.vn' }
   # s.source           = { :git => 'https://github.com/songoku20/VietIdSDK-iOS.git', :tag => s.version.to_s }
-  s.source           = { :http => "https://github.com/songoku20/VietIdSDK-iOS/releases/download/1.1.3/VietIdSDK-1.1.3.zip" }
+  s.source           = { :http => "https://github.com/songoku20/VietIdSDK-iOS/releases/download/1.1.6/VietIdSDK-1.1.6.zip" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   # s.ios.deployment_target = '8.0'
@@ -40,5 +40,6 @@ Pod::Spec.new do |s|
   s.source_files        = 'VietIdSDK-iOS.framework/Versions/A/Headers/VietIdSDKController.h'
   s.resource            = 'VietIdSDK-iOS.bundle'
   s.vendored_frameworks = 'VietIdSDK-iOS.framework'
+  s.dependency 'SHUtilitiesV2'
 
 end
