@@ -12,3 +12,5 @@
 "error_not_logged_in" = "您尚未登录。请稍后再查看。";
 "error_log_out" = "无法退出。请稍后再试。";
 "error_token_invalid" = "令牌无效。请重试。";
+"error_account_invalid" = "此帐户无效。请再试一遍。";
+"error_invalid_code" = "登录代码无效。请再试一遍。";

@@ -10,7 +10,10 @@
 #import "AccessToken.h"
 #import "VietIdException.h"
 #import "UserInfo.h"
-@import UIKit;
+
+#define VERSION_NAME @"1.1.7"
+
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,9 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 #define CN @"zh"
 
 
-static NSInteger NATIVE = 0;//Show fullscreen of dialog authen
-static NSInteger NATIVE_WITH_FALLBACK = 1; //Show fullscreen authen otherwise show web dialog to authen
-static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
+typedef enum{
+    LOGIN = 0,
+    CHECK_SESSION = 1
+} ActionType;
 
 @protocol OnVietIdResponse
 -(void)onSuccess:(UserInfo*)userInfo;
@@ -134,6 +138,17 @@ static NSInteger WEB_DIALOG = 2;//Show Web Dialog for authen
  * Get unique ID.
  */
 -(NSString*)getUniqueID;
+
+/**
+ * Get accounts login on device.
+ */
+-(void)getArrayAccounts:(void(^)(BOOL  success, NSArray<NSDictionary<NSString*,id>*> * _Nonnull devices, NSString* code))completion;
+
+/**
+ * Quick login with email or phone number.
+ */
+-(void)quickLogin:(NSString*)email code:(NSString*)code;
+
 @end
 
 NS_ASSUME_NONNULL_END

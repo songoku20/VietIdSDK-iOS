@@ -12,3 +12,5 @@
 "error_not_logged_in" = "You are not logged in. Please check again later.";
 "error_log_out" = "Cannot logout. Please try again later.";
 "error_token_invalid" = "Token is invalid. Please try again.";
+"error_account_invalid" = "Account is invalid. Please try again.";
+"error_invalid_code" = "Code is invalid. Please try again.";

@@ -1,0 +1,16 @@
+
+/* Class = "UILabel"; text = "Đã xảy ra lỗi."; ObjectID = "lu0-S7-hXg"; */
+"error_cannot_get_authen_info" = "Could not retrieve data. Please try again later.";
+"error_get_json_token" = "An error occurred during processing. Please try again later.";
+"error_get_token_parse" = "Could not get the returned token. Please try again later.";
+"error_invalid_app" = "The application is not valid. Please check it again.";
+"error_cannot_get_code" = "Failed to retrieve credentials. Please try again later.";
+"require_params_client_id" = "ClientId must not empty";
+"require_params_client_secret" = "ClientSecret must not empty";
+"require_params_bundle_id" = "BundleId must not empty";
+"network_error" = "Please check your configure on your AppDelegate. Cannot get sharedInstance of Application.";
+"error_not_logged_in" = "You are not logged in. Please check again later.";
+"error_log_out" = "Cannot logout. Please try again later.";
+"error_token_invalid" = "Token is invalid. Please try again.";
+"error_account_invalid" = "Account is invalid. Please try again.";
+"error_invalid_code" = "Code is invalid. Please try again.";

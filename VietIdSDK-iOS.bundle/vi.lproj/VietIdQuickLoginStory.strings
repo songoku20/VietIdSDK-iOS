@@ -1,0 +1,16 @@
+
+/* Class = "UILabel"; text = "Đã xảy ra lỗi."; ObjectID = "lu0-S7-hXg"; */
+"error_cannot_get_authen_info" = "Không thể truy xuất dữ liệu. Vui lòng thử lại sau.";
+"error_get_json_token" = "Xảy ra lỗi trong quá trình xử lý. Vui lòng thử lại sau.";
+"error_get_token_parse" = "Không thể nhận được mã thông báo được trả lại. Vui lòng thử lại sau.";
+"error_invalid_app" = "Ứng dụng không hợp lệ. Vui lòng kiểm tra lại.";
+"error_cannot_get_code" = "Không thể truy xuất thông tin đăng nhập. Vui lòng thử lại sau.";
+"require_params_client_id" = "ClientId không được để trống";
+"require_params_client_secret" = "ClientSecret không được để trống";
+"require_params_bundle_id" = "BundleId không được để trống";
+"network_error" = "Vui lòng kiểm tra cấu hình của bạn trên AppDelegate của bạn. Không thể lấy được shareIntance của ứng dụng.";
+"error_not_logged_in" = "Bạn chưa đăng nhập. Vui lòng kiểm tra lại sau.";
+"error_log_out" = "Không thể đăng xuất. Vui lòng thử lại sau.";
+"error_token_invalid" = "Mã thông báo không hợp lệ. Vui lòng thử lại.";
+"error_invalid_account" = "Tài khoản không hợp lệ. Vui lòng thử lại.";
+"error_invalid_code" = "Mã đăng nhập không hợp lệ. Vui lòng thử lại.";
