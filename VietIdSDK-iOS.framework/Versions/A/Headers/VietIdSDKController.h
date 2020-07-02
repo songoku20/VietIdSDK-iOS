@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AccessToken.h"
+#import "VietIdAccessToken.h"
 #import "VietIdException.h"
-#import "UserInfo.h"
+#import "VietIdUserInfo.h"
 
-#define VERSION_NAME @"1.1.7"
+#define VERSION_NAME @"1.1.8"
 
 #import <UIKit/UIKit.h>
 
@@ -29,12 +29,12 @@ typedef enum{
 } ActionType;
 
 @protocol OnVietIdResponse
--(void)onSuccess:(UserInfo*)userInfo;
+-(void)onSuccess:(VietIdUserInfo*)userInfo;
 -(void)onFailed:(VietIdException*) e;
 @end
 
 @protocol OnVietIdLoginCallback
--(void)onSuccess:(AccessToken*) accessToken;
+-(void)onSuccess:(VietIdAccessToken*) accessToken;
 -(void)onFailed:(VietIdException*) vietIdException;
 -(void)onCancel;
 @end
@@ -113,11 +113,11 @@ typedef enum{
 /**
  * Get user info with asynchronous
  */
--(void)getUserInfoAsync:(void(^)(BOOL  success,VietIdException* error,UserInfo* userinfo))callback;
+-(void)getUserInfoAsync:(void(^)(BOOL  success,VietIdException* error,VietIdUserInfo* userinfo))callback;
 /**
  * Get user info with synchronous
  */
--(UserInfo*)getUserInfo;
+-(VietIdUserInfo*)getUserInfo;
 
 /**
  * Set disable phone number on login session: YES if you want disable login via vietID with phonenumber otherwise
