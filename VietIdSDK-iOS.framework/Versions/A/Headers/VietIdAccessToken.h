@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VietIdDataExtend.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,6 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
  * @return scope
  */
 @property(nonatomic, weak) NSString* scope;
+/**
+ * @return Data from viva and king_talk
+ */
+@property(nonatomic) VietIdDataExtend* dataExtend;
+
 /**
  * Not call method everytime from your app
  */
