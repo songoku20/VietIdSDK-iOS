@@ -7,13 +7,11 @@
 
 @interface VietIdDataKingTalk : NSObject
 
-@property (nonatomic) NSString *status;
+@property (nonatomic, strong) NSString *status;
 
-@property (nonatomic) NSDictionary *result;
+@property (nonatomic, strong) NSDictionary *result;
 
 + (VietIdDataKingTalk *)initFromDict:(NSDictionary *)dict;
-
-+ (NSString *)defaultDescription;
 
 - (NSDictionary *)toDict;
 

@@ -20,8 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (VietIdDataExtend *)initFromDict:(NSDictionary *)dict;
 
-+ (NSString *)defaultDescription;
-
 - (NSDictionary *)toDict ;
 
 @end

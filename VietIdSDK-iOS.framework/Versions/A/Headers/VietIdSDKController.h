@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VietIdResponseUserInfo.h"
 #import "VietIdAccessToken.h"
 #import "VietIdException.h"
-#import "VietIdUserInfo.h"
 
 #define VERSION_NAME @"1.1.9"
 
@@ -29,7 +29,7 @@ typedef enum{
 } ActionType;
 
 @protocol OnVietIdResponse
--(void)onSuccess:(VietIdUserInfo*)userInfo;
+-(void)onSuccess:(VietIdResponseUserInfo*)userInfo;
 -(void)onFailed:(VietIdException*) e;
 @end
 
@@ -113,11 +113,11 @@ typedef enum{
 /**
  * Get user info with asynchronous
  */
--(void)getUserInfoAsync:(void(^)(BOOL  success,VietIdException* error,VietIdUserInfo* userinfo))callback;
+-(void)getUserInfoAsync:(void(^)(BOOL  success,VietIdException* error,VietIdResponseUserInfo* userinfo))callback;
 /**
  * Get user info with synchronous
  */
--(VietIdUserInfo*)getUserInfo;
+-(VietIdDataVietId*)getUserInfo;
 
 /**
  * Set disable phone number on login session: YES if you want disable login via vietID with phonenumber otherwise
