@@ -12,15 +12,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface VietIdDataViva : NSObject
 
-@property (nonatomic) NSInteger code;
+@property (nonatomic) NSString *status;
 
-@property (nonatomic, strong) NSString *status;
+@property (nonatomic) NSString *message;
 
-@property (nonatomic, strong) NSString *message;
+@property (nonatomic) NSString *code;
 
-@property (nonatomic, strong) NSDictionary *data;
+@property (nonatomic) NSDictionary *data;
 
 + (VietIdDataViva *)initFromDict:(NSDictionary *)dict;
+
++ (NSString *)defaultDescription;
 
 - (NSDictionary *)toDict;
 
