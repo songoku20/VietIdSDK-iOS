@@ -11,7 +11,7 @@
 #import "VietIdException.h"
 #import "VietIdUserInfo.h"
 
-#define VERSION_NAME @"1.2.0"
+#define VERSION_NAME @"1.2.1"
 
 #import <UIKit/UIKit.h>
 
