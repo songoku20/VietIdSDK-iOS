@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "VietIdDataViva.h"
 #import "VietIdDataKingTalk.h"
+#import "VietIdDataApple.h"
+#import "VietIdDataKingHub.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,8 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic) VietIdDataKingTalk *dataKingTalk;
 
-+ (VietIdDataExtend *)initFromDict:(NSDictionary *)dict;
+@property(nonatomic) VietIdDataApple *dataApple;
 
+@property(nonatomic) VietIdDataKingHub *dataKingHub;
+
++ (VietIdDataExtend *)initFromDict:(NSDictionary *)dict;
++ (VietIdDataExtend *)initFromArray:(NSArray *)dictArray;
 + (NSString *)defaultDescription;
 
 - (NSDictionary *)toDict ;

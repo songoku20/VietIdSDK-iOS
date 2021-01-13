@@ -11,7 +11,7 @@
 #import "VietIdException.h"
 #import "VietIdUserInfo.h"
 
-#define VERSION_NAME @"1.2.1"
+#define VERSION_NAME @"1.2.7"
 
 #import <UIKit/UIKit.h>
 
@@ -24,8 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 typedef enum{
-    LOGIN = 0,
-    CHECK_SESSION = 1
+    LOGIN         = 0,
+    CHECK_SESSION = 1,
+    LOGIN_APPLE   = 2,
 } ActionType;
 
 @protocol OnVietIdResponse
@@ -48,6 +49,7 @@ typedef enum{
 @property(nonatomic, strong) id<OnVietIdLoginCallback> onVietIdLoginCallback;
 @property(nonatomic, strong) id<OnVietIdResponse> onVietIdResponse;
 @property(nonatomic) BOOL disableExitLogin;
+@property(nonatomic) BOOL enableAppleLogin;
 
 /**
  * Create singleton instance of VietIdSDKController
@@ -99,6 +101,7 @@ typedef enum{
  * Call this when you want to login via vietID
  */
 -(void)login;
+-(void)loginApple;
 /**
  * Call this when you want to logout via vietID
  */

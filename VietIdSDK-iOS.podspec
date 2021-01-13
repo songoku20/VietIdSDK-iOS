@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'VietIdSDK-iOS'
-  s.version          = '1.2.1'
+  s.version          = '1.2.7'
   s.summary          = 'Everything about this project under our ownership'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'songoku20' => 'sonleminh@vccorp.vn' }
   # s.source           = { :git => 'https://github.com/songoku20/VietIdSDK-iOS.git', :tag => s.version.to_s }
-  s.source           = { :http => "https://github.com/songoku20/VietIdSDK-iOS/releases/download/1.2.1/VietIdSDK-1.2.1.zip" }
+  s.source           = { :http => "https://github.com/songoku20/VietIdSDK-iOS/releases/download/1.2.7/VietIdSDK-1.2.7.zip" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   # s.ios.deployment_target = '8.0'

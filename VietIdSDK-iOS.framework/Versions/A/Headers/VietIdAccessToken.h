@@ -32,8 +32,13 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * @return Data from viva and king_talk
  */
-@property(nonatomic) VietIdDataExtend* dataExtend;
+//@property(nonatomic) VietIdDataExtend* dataExtend;
+///**
+// * @return Data debug
+// */
+//@property(nonatomic) VietIdDataExtend* dataExtendArray;
 
++(VietIdAccessToken*)initFromDictDebug:(NSDictionary*) dict;
 /**
  * Not call method everytime from your app
  */
