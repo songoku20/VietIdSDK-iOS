@@ -11,7 +11,7 @@
 #import "VietIdException.h"
 #import "VietIdUserInfo.h"
 
-#define VERSION_NAME @"1.3.0"
+#define VERSION_NAME @"1.3.2"
 
 #import <UIKit/UIKit.h>
 
@@ -27,6 +27,7 @@ typedef enum{
     LOGIN         = 0,
     CHECK_SESSION = 1,
     LOGIN_APPLE   = 2,
+    TEST          = 3
 } ActionType;
 
 @protocol OnVietIdResponse
@@ -49,6 +50,8 @@ typedef enum{
 @property(nonatomic, strong) id<OnVietIdLoginCallback> onVietIdLoginCallback;
 @property(nonatomic, strong) id<OnVietIdResponse> onVietIdResponse;
 @property(nonatomic) BOOL disableExitLogin;
+@property(nonatomic) NSString *keychainService;
+@property(nonatomic) NSString *keychainAccessGroup;
 @property(nonatomic) BOOL enableAppleLogin;
 
 /**
@@ -116,6 +119,10 @@ typedef enum{
 /**
  * Get user info with asynchronous
  */
+-(void)getUserInfoAsync2:(void(^)(BOOL  success,VietIdException* error,VietIdUserInfo* userinfo, VietIdDataViva* dataViva, VietIdDataKingTalk* dataKingTalk))callback;
+/**
+ * Get user info with asynchronous
+ */
 -(void)getUserInfoAsync:(void(^)(BOOL  success,VietIdException* error,VietIdUserInfo* userinfo))callback;
 /**
  * Get user info with synchronous
@@ -151,7 +158,7 @@ typedef enum{
  * Quick login with email or phone number.
  */
 -(void)quickLogin:(NSString*)email code:(NSString*)code;
-
+-(void)loginTest;
 @end
 
 NS_ASSUME_NONNULL_END
