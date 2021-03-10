@@ -11,7 +11,7 @@
 #import "VietIdException.h"
 #import "VietIdUserInfo.h"
 
-#define VERSION_NAME @"1.3.2"
+#define VERSION_NAME @"1.3.5"
 
 #import <UIKit/UIKit.h>
 
@@ -27,7 +27,8 @@ typedef enum{
     LOGIN         = 0,
     CHECK_SESSION = 1,
     LOGIN_APPLE   = 2,
-    TEST          = 3
+    UPDATEMOBILE  = 3,
+    UPDATEMOBILE2 = 4
 } ActionType;
 
 @protocol OnVietIdResponse
@@ -158,7 +159,8 @@ typedef enum{
  * Quick login with email or phone number.
  */
 -(void)quickLogin:(NSString*)email code:(NSString*)code;
--(void)loginTest;
+-(void)update;
+-(void)updateAccLinkhay;
 @end
 
 NS_ASSUME_NONNULL_END
