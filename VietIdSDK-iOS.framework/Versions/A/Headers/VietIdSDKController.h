@@ -11,7 +11,7 @@
 #import "VietIdException.h"
 #import "VietIdUserInfo.h"
 
-#define VERSION_NAME @"1.3.5"
+#define VERSION_NAME @"1.3.3"
 
 #import <UIKit/UIKit.h>
 
@@ -27,8 +27,6 @@ typedef enum{
     LOGIN         = 0,
     CHECK_SESSION = 1,
     LOGIN_APPLE   = 2,
-    UPDATEMOBILE  = 3,
-    UPDATEMOBILE2 = 4
 } ActionType;
 
 @protocol OnVietIdResponse
@@ -51,8 +49,6 @@ typedef enum{
 @property(nonatomic, strong) id<OnVietIdLoginCallback> onVietIdLoginCallback;
 @property(nonatomic, strong) id<OnVietIdResponse> onVietIdResponse;
 @property(nonatomic) BOOL disableExitLogin;
-@property(nonatomic) NSString *keychainService;
-@property(nonatomic) NSString *keychainAccessGroup;
 @property(nonatomic) BOOL enableAppleLogin;
 
 /**
@@ -114,17 +110,19 @@ typedef enum{
 /**
  * Call this when you want to logout via vietID with asynchronous state
  */
--(void)logoutAsync:(void(^)(BOOL  success,VietIdException* error))callback;
+-(void)logoutAsync:(void(^)(BOOL  success, VietIdException* error))callback;
 
 //For get user information
+
+-(void)getUserInfoEx:(void(^)(BOOL success, VietIdException* _Nullable error,VietIdUserInfo* _Nullable userinfo, VietIdDataExtend* _Nullable dataExtend))callback;
 /**
  * Get user info with asynchronous
  */
--(void)getUserInfoAsync2:(void(^)(BOOL  success,VietIdException* error,VietIdUserInfo* userinfo, VietIdDataViva* dataViva, VietIdDataKingTalk* dataKingTalk))callback;
+-(void)getUserInfoAsync2:(void(^)(BOOL success, VietIdException* _Nullable error,VietIdUserInfo* _Nullable userinfo, VietIdDataViva* _Nullable dataViva, VietIdDataKingTalk* _Nullable dataKingTalk))callback;
 /**
  * Get user info with asynchronous
  */
--(void)getUserInfoAsync:(void(^)(BOOL  success,VietIdException* error,VietIdUserInfo* userinfo))callback;
+-(void)getUserInfoAsync:(void(^)(BOOL success, VietIdException* _Nullable error,VietIdUserInfo* _Nullable userinfo))callback;
 /**
  * Get user info with synchronous
  */
@@ -159,8 +157,7 @@ typedef enum{
  * Quick login with email or phone number.
  */
 -(void)quickLogin:(NSString*)email code:(NSString*)code;
--(void)update;
--(void)updateAccLinkhay;
+
 @end
 
 NS_ASSUME_NONNULL_END
